@@ -86,51 +86,6 @@ function tryMoveSimplified(n, m) {
     return store;
 }
 
-function tryMove(x, y, n, m, direction, store = []) {
-    if (store.length == n * m) {
-        return store;
-    }
-
-    var canMove = false;
-
-    if (canMoveToCoordenates(x, y, n, m, store)) {
-        canMove = true;
-        store = saveToStore(x, y, direction, store);
-    }
-
-    if (direction == 'R') {
-        if (canMove) {
-            return tryMove(x, y + 1, n, m, direction, store);
-        }
-
-        return tryMove(x + 1, y - 1, n, m, 'D', store);
-    }
-
-    if (direction == 'D') {
-        if (canMove) {
-            return tryMove(x + 1, y, n, m, direction, store);
-        }
-
-        return tryMove(x - 1, y - 1, n, m, 'L', store);
-    }
-
-    if (direction == 'L') {
-        if (canMove) {
-            return tryMove(x, y - 1, n, m, direction, store);
-        }
-
-        return tryMove(x - 1, y + 1, n, m, 'U', store);
-    }
-
-    if (direction == 'U') {
-        if (canMove) {
-            return tryMove(x - 1, y, n, m, direction, store);
-        }
-
-        return tryMove(x + 1, y + 1, n, m, 'R', store);
-    }
-}
-
 /**
  * Función para guardar objectos en la colección
  *
