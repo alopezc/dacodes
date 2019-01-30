@@ -1,0 +1,8 @@
+.menu-drawer .logo-container {
+    background: #007817;
+    padding: 15px;
+}
+
+.menu-drawer .logo-container img {
+    max-height: 200px;
+}
