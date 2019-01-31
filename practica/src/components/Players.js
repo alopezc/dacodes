@@ -30,6 +30,12 @@ class Players extends React.Component {
         this.setState({ show: true });
     };
 
+    /**
+     * Metodo para pintar la lista de jugadores
+     *
+     * @param [object] arreglo de jugadores
+     *
+     */
     renderList(positions) {
         return _.map(positions[0], (players, key) => {
             return (
@@ -57,6 +63,9 @@ class Players extends React.Component {
         });
     }
 
+    /**
+     * Metodo para pintar el modal
+     */
     renderModal() {
         if (!this.state.selectPlayer) {
             return null;

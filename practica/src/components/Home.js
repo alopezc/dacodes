@@ -19,6 +19,12 @@ class Home extends React.Component {
         this.props.fetchGames();
     }
 
+    /**
+     * Metodo para pintar la lista de juegos
+     *
+     * @param [object] arreglo de juegos
+     *
+     */
     renderList(games) {
         if (!games.length) {
             return (
