@@ -1,12 +1,10 @@
 import Drawer from 'rc-drawer';
 import React from 'react';
-import MenuDrawer from './MenuDrawer';
 import { BrowserRouter, Route } from 'react-router-dom';
-
 import Home from './Home';
-import Estadistics from './Estadistics';
+import MenuDrawer from './MenuDrawer';
+import Statistics from './Statistics';
 import Players from './Players';
-
 import 'rc-drawer/assets/index.css';
 
 class App extends React.Component {
@@ -53,8 +51,8 @@ class App extends React.Component {
                                 <div>
                                     <Route path="/" exact component={Home} />
                                     <Route
-                                        path="/estadistics"
-                                        component={Estadistics}
+                                        path="/statistics"
+                                        component={Statistics}
                                     />
                                     <Route
                                         path="/players"

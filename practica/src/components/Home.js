@@ -1,26 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchGames } from '../actions';
+import Script from 'react-load-script';
 import { Tab, Row, Col, Nav } from 'react-bootstrap';
+import { fetchGames } from '../actions';
 import Game from './Game';
+import { months, imageVenados } from './Cons';
 
 class Home extends React.Component {
-    months = [
-        'Enero',
-        'Febrero',
-        'Marzo',
-        'Abril',
-        'Mayo',
-        'Junio',
-        'Julio',
-        'Agosto',
-        'Septiembre',
-        'Octubre',
-        'Noviembre',
-        'Diciembre'
-    ];
-
     componentDidMount() {
         this.props.fetchGames();
     }
@@ -42,7 +29,7 @@ class Home extends React.Component {
             return (
                 <div key={key}>
                     <h2 className="month-separator">
-                        {this.months[parseInt(yearMonth[1]) - 1]}
+                        {months[parseInt(yearMonth[1]) - 1]}
                     </h2>
 
                     {_.map(group, game => {
@@ -51,6 +38,18 @@ class Home extends React.Component {
                 </div>
             );
         });
+    }
+
+    handleScriptCreate() {
+        this.setState({ scriptLoaded: false });
+    }
+
+    handleScriptError() {
+        this.setState({ scriptError: true });
+    }
+
+    handleScriptLoad() {
+        this.setState({ scriptLoaded: true });
     }
 
     render() {
@@ -71,7 +70,7 @@ class Home extends React.Component {
                 <div className="text-center logo-container-home">
                     <img
                         alt="Venatdos FC"
-                        src="https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10732/10732.png"
+                        src={imageVenados}
                         className="img-fluid"
                     />
                 </div>
@@ -103,6 +102,13 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                 </Tab.Container>
+
+                <Script
+                    url="//addevent.com/libs/atc/1.6.1/atc.min.js"
+                    onCreate={this.handleScriptCreate.bind(this)}
+                    onError={this.handleScriptError.bind(this)}
+                    onLoad={this.handleScriptLoad.bind(this)}
+                />
             </div>
         );
     }

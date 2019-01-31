@@ -1,11 +1,9 @@
 import React from 'react';
+import { days, imageVenados } from './Cons';
 
 const Game = ({ game }) => {
-    const imageVenados =
-        'https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10732/10732.png';
-    const days = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sáb'];
-
     let date = new Date(Date.parse(game.datetime));
+
     return (
         <div key={game.datetime} className="game-container">
             <div className="row align-items-center">

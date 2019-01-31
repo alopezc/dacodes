@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { imageVenados } from './Cons';
 
 class MenuDrawer extends React.Component {
     render() {
@@ -8,7 +9,7 @@ class MenuDrawer extends React.Component {
                 <div className="text-center logo-container">
                     <img
                         alt="Venatdos FC"
-                        src="https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10732/10732.png"
+                        src={imageVenados}
                         className="img-fluid"
                     />
                 </div>
@@ -25,10 +26,10 @@ class MenuDrawer extends React.Component {
                     <li className="nav-item">
                         <Link
                             className="nav-link"
-                            to="/estadistics"
+                            to="/statistics"
                             onClick={this.props.onSwitch}
                         >
-                            Estadisticas
+                            Estadísticas
                         </Link>
                     </li>
                     <li className="nav-item">
