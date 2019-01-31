@@ -1,8 +1,83 @@
-.menu-drawer .logo-container {
-    background: #007817;
-    padding: 15px;
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
-.menu-drawer .logo-container img {
+[role='main'],
+.no-results {
+    padding: 30px 0;
+}
+
+.logo-container-home {
+    padding-bottom: 30px;
+}
+
+.menu-drawer .logo-container img,
+.logo-container-home img {
     max-height: 200px;
+}
+
+.menu-drawer .logo-container,
+.game-container {
+    background: #007817;
+    padding: 15px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.team-info {
+    font-size: 16px;
+}
+
+.team-logo {
+    width: 64px;
+}
+
+.date-container {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.tab-league {
+    font-size: 20px;
+}
+
+.tab-league a {
+    color: #000;
+    opacity: 0.5;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+    background-color: #ffbe00;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #ffbe00;
+    color: #000;
+    opacity: 1;
+}
+
+.month-separator {
+    background: #7f7f7f;
+    color: #fff;
+    margin: 0 0;
+    padding: 5px;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.ico-calendar {
+    font-size: 20px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .menu-drawer .logo-container,
+    .game-container {
+        font-size: 28px;
+    }
 }

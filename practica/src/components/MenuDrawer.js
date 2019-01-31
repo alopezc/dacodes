@@ -1,34 +1,49 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MenuDrawer = () => {
-    return (
-        <div className="menu-drawer">
-            <div className="text-center logo-container">
-                <img
-                    alt="Venatdos FC"
-                    src="https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10732/10732.png"
-                    className="img-fluid"
-                />
+class MenuDrawer extends React.Component {
+    render() {
+        return (
+            <div className="menu-drawer">
+                <div className="text-center logo-container">
+                    <img
+                        alt="Venatdos FC"
+                        src="https://s3.amazonaws.com/lmxwebsite/docs/archdgtl/AfldDrct/logos/10732/10732.png"
+                        className="img-fluid"
+                    />
+                </div>
+                <ul className="nav flex-column">
+                    <li className="nav-item">
+                        <Link
+                            className="nav-link"
+                            to="/"
+                            onClick={this.props.onSwitch}
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            className="nav-link"
+                            to="/estadistics"
+                            onClick={this.props.onSwitch}
+                        >
+                            Estadisticas
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            className="nav-link"
+                            to="/players"
+                            onClick={this.props.onSwitch}
+                        >
+                            Jugadores
+                        </Link>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/estadisticas">
-                        Estadisticas
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/jugadores">
-                        Jugadores
-                    </a>
-                </li>
-            </ul>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default MenuDrawer;
