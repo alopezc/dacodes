@@ -1,8 +1,12 @@
 /**
- * TODO: Se comento este código ya que por la formac en que funciona axios
- * no se puede obtener la información por restricciones de CORS,
- * en su lugar se utilizara el arreglo de ejemplo que se obtuvo desde
+ * TODO: Se comento este código ya que por la forma en que funciona axios
+ * no se puede obtener la información por restricciones de CORS en los navegadores,
+ * en su lugar se utiliza el arreglo de ejemplo que se obtuvo desde
  * postman para poder continuar con la maquetación.
+ *
+ * En caso de poder obtener información desde el servicio, descomentar este fragmanto
+ * y elimnar las funciones que estan debajo.
+ *
  */
 /*
 

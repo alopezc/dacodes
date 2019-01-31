@@ -1,6 +1,12 @@
 import React from 'react';
 import { days, imageVenados } from './Cons';
 
+/**
+ * Componente que pinta la información de un juego
+ *
+ * @param object game Objecto con la información del juego
+ *
+ */
 const Game = ({ game }) => {
     let date = new Date(Date.parse(game.datetime));
 

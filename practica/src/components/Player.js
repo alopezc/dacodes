@@ -1,5 +1,8 @@
 import React from 'react';
 
+/**
+ * Componente que pinta la información basica del jugador
+ */
 class Player extends React.Component {
     playerName = this.props.player.name + ' ' + this.props.player.first_surname;
 

@@ -2,6 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { imageVenados } from './Cons';
 
+/**
+ * Componente que pinta el menu lateral
+ *
+ * Se utilizá Link par poder realizar la navegación entre los componente
+ * sin que el navegador recargue y vuelva a cargar assets de manera innecesaria
+ */
 class MenuDrawer extends React.Component {
     render() {
         return (

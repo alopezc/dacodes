@@ -7,6 +7,13 @@ import Statistics from './Statistics';
 import Players from './Players';
 import 'rc-drawer/assets/index.css';
 
+/**
+ * Punto de entrada a la aplicación
+ *
+ * BrowserRouter habilita la navegación entre componentes especificados en las etiquetas Route
+ * Drawer permite emular el efecto drawer para el menú establecido en el componente MenuDrawer
+ *
+ */
 class App extends React.Component {
     state = {
         open: false

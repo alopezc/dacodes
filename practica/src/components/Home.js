@@ -7,6 +7,13 @@ import { fetchGames } from '../actions';
 import Game from './Game';
 import { months, imageVenados } from './Cons';
 
+/**
+ * Componente que pinta la del home}
+ *
+ * Se utliza el componente Script para montar el script que permite
+ * agregar eventos al caledario, sino se usará al cambiar de componente
+ * se pierde esta funcionalidad
+ */
 class Home extends React.Component {
     componentDidMount() {
         this.props.fetchGames();

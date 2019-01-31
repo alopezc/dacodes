@@ -2,6 +2,9 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import { imageVenados } from './Cons';
 
+/**
+ * Componente que pinta las estadisticas de los juegos
+ */
 class Statistics extends React.Component {
     render() {
         return (

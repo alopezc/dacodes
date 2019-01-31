@@ -5,6 +5,11 @@ import { fetchPlayers } from '../actions';
 import { Modal } from 'react-bootstrap';
 import Player from './Player';
 
+/**
+ * Componente que pinta la información de los jugadores
+ *
+ * Modal nos permite utilizar la ventana modal de boostrap
+ */
 class Players extends React.Component {
     state = { selectPlayer: null, show: false };
 
