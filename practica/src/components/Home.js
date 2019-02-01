@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import Script from 'react-load-script';
+import loadjs from 'loadjs';
 import { Tab, Row, Col, Nav } from 'react-bootstrap';
 import { fetchGames } from '../actions';
 import Game from './Game';
@@ -17,6 +17,7 @@ import { months, imageVenados } from './Cons';
 class Home extends React.Component {
     componentDidMount() {
         this.props.fetchGames();
+        loadjs('//addevent.com/libs/atc/1.6.1/atc.min.js');
     }
 
     /**
@@ -51,18 +52,6 @@ class Home extends React.Component {
                 </div>
             );
         });
-    }
-
-    handleScriptCreate() {
-        this.setState({ scriptLoaded: false });
-    }
-
-    handleScriptError() {
-        this.setState({ scriptError: true });
-    }
-
-    handleScriptLoad() {
-        this.setState({ scriptLoaded: true });
     }
 
     render() {
@@ -115,13 +104,6 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                 </Tab.Container>
-
-                <Script
-                    url="//addevent.com/libs/atc/1.6.1/atc.min.js"
-                    onCreate={this.handleScriptCreate.bind(this)}
-                    onError={this.handleScriptError.bind(this)}
-                    onLoad={this.handleScriptLoad.bind(this)}
-                />
             </div>
         );
     }
