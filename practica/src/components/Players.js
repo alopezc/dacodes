@@ -113,7 +113,7 @@ class Players extends React.Component {
 
     render() {
         if (!this.props.players.length) {
-            return null;
+            return <div className="text-center">Cargando...</div>;
         }
 
         return (

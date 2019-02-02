@@ -17,7 +17,6 @@ import { months, imageVenados } from './Cons';
 class Home extends React.Component {
     componentDidMount() {
         this.props.fetchGames();
-        loadjs('//addevent.com/libs/atc/1.6.1/atc.min.js');
     }
 
     /**
@@ -56,7 +55,7 @@ class Home extends React.Component {
 
     render() {
         if (!this.props.games.length) {
-            return null;
+            return <div className="text-center">Cargando...</div>;
         }
 
         const gamesCopaMX = this.props.games.filter(game => {
@@ -104,6 +103,7 @@ class Home extends React.Component {
                         </Col>
                     </Row>
                 </Tab.Container>
+                {loadjs('https://addevent.com/libs/atc/1.6.1/atc.min.js')}
             </div>
         );
     }
