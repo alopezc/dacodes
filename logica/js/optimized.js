@@ -4,50 +4,24 @@
  * iguales, mayores o menores
  *
  * @param int r numero de filas
- * @param {*} c numero de columnas
+ * @param int c numero de columnas
  * @return string
  */
 
 function testCase(r, c) {
-    if (isEven(c) && !isEven(r) && c > r) {
+    if (c >= r) {
+        if (isEven(r)) {
+            return 'L';
+        }
+
         return 'R';
     }
 
-    if (!isEven(c) && !isEven(r) && c > r) {
-        return 'R';
-    }
-
-    if (!isEven(c) && !isEven(r) && c == r) {
-        return 'R';
-    }
-
-    if (!isEven(c) && !isEven(r) && c < r) {
-        return 'D';
-    }
-
-    if (!isEven(c) && isEven(r) && c < r) {
-        return 'D';
-    }
-
-    if (!isEven(c) && isEven(r) && c > r) {
-        return 'L';
-    }
-
-    if (isEven(c) && isEven(r) && c > r) {
-        return 'L';
-    }
-
-    if (isEven(c) && isEven(r) && c == r) {
-        return 'L';
-    }
-
-    if (isEven(c) && !isEven(r) && c < r) {
+    if (isEven(c)) {
         return 'U';
     }
 
-    if (isEven(c) && isEven(r) && c < r) {
-        return 'U';
-    }
+    return 'D';
 }
 
 function isEven(val) {

@@ -22,24 +22,30 @@ body {
     background: #007817;
     padding: 15px;
     color: #fff;
-    font-size: 40px;
+    font-size: 2rem;
 }
 
 .team-info {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .team-logo {
     width: 64px;
+    max-height: 100%;
+}
+
+.team-logo-container {
+    height: 72px;
 }
 
 .date-container {
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
+    padding-top: 10px;
 }
 
 .tab-league {
-    font-size: 20px;
+    font-size: 1rem;
 }
 
 .tab-league a {
@@ -67,13 +73,13 @@ body {
     margin: 0 0;
     padding: 5px;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1rem;
     text-align: left;
     font-weight: 500;
 }
 
 .ico-calendar {
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #fff;
 }
 
@@ -81,7 +87,7 @@ body {
     background: #007817;
     color: #fff;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .table-statistics td {
@@ -142,12 +148,12 @@ body {
     font-weight: 600;
     color: #333;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
 }
 .addeventatc:hover {
     color: #555;
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: underline;
 }
 .addeventatc:active {
@@ -187,7 +193,7 @@ body {
     font-weight: 600;
     line-height: 100%;
     background: #fff;
-    font-size: 15px;
+    font-size: 1rem;
     text-decoration: none;
     text-align: left;
     margin-left: -1px;
@@ -214,7 +220,7 @@ body {
     background: #fff;
     text-decoration: none;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 1rem;
     color: #333;
     font-weight: 600;
     padding: 14px 10px 14px 55px;
@@ -231,7 +237,7 @@ body {
 
 .addeventatc_dropdown em {
     color: #999 !important;
-    font-size: 12px !important;
+    font-size: 0.9rem !important;
     font-weight: 400;
 }
 
@@ -239,7 +245,7 @@ body {
     background: #fff;
     color: #cacaca !important;
     cursor: pointer;
-    font-size: 9px !important;
+    font-size: 0.8rem !important;
     font-style: normal !important;
     font-weight: 400 !important;
     line-height: 110% !important;
@@ -320,29 +326,32 @@ body {
 @media (max-width: 768px) {
     .menu-drawer .logo-container,
     .game-container {
-        font-size: 28px;
+        font-size: 2rem;
     }
 
     .table-statistics td {
         text-align: center;
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .team-name {
         display: block;
     }
 
-    .team-logo {
-        width: 32px;
-    }
-
-    .game-container,
     .team-info {
-        font-size: 14px;
+        font-size: 0.8rem;
     }
 
     .game-container {
-        padding: 0;
-        font-size: 16px;
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .date-container .addeventatc {
+        display: block;
+    }
+
+    .game-score {
+        font-size: 2rem;
     }
 }

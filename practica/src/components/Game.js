@@ -1,5 +1,6 @@
 import React from 'react';
-import { days, imageVenados } from './Cons';
+import { days } from './Cons';
+import Team from './Team';
 
 /**
  * Componente que pinta la información de un juego
@@ -12,8 +13,8 @@ const Game = ({ game }) => {
 
     return (
         <div key={game.datetime} className="game-container">
-            <div className="row align-items-center">
-                <div className="col">
+            <div className="row align-items-start">
+                <div className="col-2">
                     <div className="date-container">
                         <div
                             title="Add to Calendar"
@@ -36,24 +37,20 @@ const Game = ({ game }) => {
                         </div>
                     </div>
                 </div>
-                <div className="col team-info">
-                    <img
-                        alt=""
-                        src={game.local ? imageVenados : game.opponent_image}
-                        className="team-logo"
-                    />
-                    <div>{game.local ? 'Venados F.C.' : game.opponent}</div>
+                <div className="col-5 team-info col-sm-3">
+                    <div className="d-sm-none game-score">
+                        {Math.abs(game.home_score)}
+                    </div>
+                    <Team team={game} local={game.local} />
                 </div>
-                <div className="col">
+                <div className="col-4 d-none d-sm-block game-score">
                     {Math.abs(game.home_score)} - {Math.abs(game.away_score)}
                 </div>
-                <div className="col team-info">
-                    <img
-                        alt=""
-                        src={!game.local ? imageVenados : game.opponent_image}
-                        className="team-logo"
-                    />
-                    <div>{!game.local ? 'Venados F.C.' : game.opponent}</div>
+                <div className="col-5 team-info col-sm-3">
+                    <div className="d-sm-none game-score">
+                        {Math.abs(game.away_score)}
+                    </div>
+                    <Team team={game} local={!game.local} />
                 </div>
             </div>
         </div>
